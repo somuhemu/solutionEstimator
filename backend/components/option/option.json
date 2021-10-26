@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_option_options",
+  "info": {
+    "name": "option",
+    "icon": "location-arrow",
+    "description": ""
+  },
+  "options": {
+    "timestamps": false,
+    "privateAttributes":["_id","id"]
+  },
+  "attributes": {
+    "optionText": {
+      "type": "string",
+      "required": true
+    },
+    "minPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "maxPrice": {
+      "type": "decimal"
+    },
+    "minDays": {
+      "type": "integer"
+    },
+    "maxDays": {
+      "type": "integer"
+    }
+  }
+}

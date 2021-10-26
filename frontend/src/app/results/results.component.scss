@@ -1,0 +1,133 @@
+@import '../../styles.scss';
+
+.heading {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 20px;
+  color: $light-grey;
+}
+section {
+  width:90%;
+  margin:auto;
+}
+.sectionCard {
+  margin:20px auto;
+}
+.sectionName {
+  font-weight: 500;
+  font-size: 18px;
+}
+.questionList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.questionText {
+  margin-bottom: 20px;
+  font-size:15px;
+}
+
+.optionChip {
+  background-color: $green;
+  color:$white;
+  height:max-content;
+}
+
+.questionTemplate {
+  width: 45%;
+  margin-bottom: 5px;
+}
+.priceEstimate {
+  width: 20%;
+  height: auto;
+  -moz-box-shadow:inset 0 0 10px $white;
+  -webkit-box-shadow:inset 0 0 10px $white;
+  box-shadow:inset 0 0 10px $white;
+  font-size:x-large;
+  border-radius: 20px;
+  background-color: $yellow;
+  margin: 40px auto 40px auto;
+  text-align: center;
+  color:$white;
+  font-weight: 500;
+}
+
+@media screen and (min-width:568px) and (max-width:768px){
+  .questionTemplate {
+    width: 100%;
+    margin-top:10px ;
+    margin-bottom: 10px;
+  }
+  .questionList {
+    flex-flow: column;
+  }
+  .priceEstimate {
+    width: 40%;
+    font-size: large;
+
+  }
+  .questionText {
+    font-size: small;
+  }
+  .heading {
+    font-size: x-large;
+  }
+}
+
+.errorMessage {
+  width: 100%;
+  text-align: center;
+  background-color: $light-grey;
+  color:$white;
+}
+@media screen and (min-width:769px) and (max-width:978px){
+  .priceEstimate {
+    width: 30%;
+  }
+
+  .questionText{
+    font-size: small;
+  }
+
+}
+
+@media screen and (min-width:368px) and (max-width:567px){
+  .priceEstimate {
+    width: 40%;
+    font-size: medium;
+  }
+  .questionList {
+    flex-flow: column;
+  }
+  .questionTemplate {
+    width: 100%;
+    margin-top:10px ;
+    margin-bottom: 10px;
+  }
+  .questionText{
+    font-size: small;
+  }
+  .heading {
+    font-size: large;
+  }
+}
+@media screen and (min-width:168px) and (max-width:367px){
+  .priceEstimate {
+    width: 70%;
+    font-size: medium;
+  }
+  .questionList {
+    flex-flow: column;
+  }
+  .questionTemplate {
+    width: 100%;
+    margin-top:10px ;
+    margin-bottom: 10px;
+  }
+  .questionText{
+    font-size: small;
+  }
+  .heading{
+    font-size: large;
+  }
+}

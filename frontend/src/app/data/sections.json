@@ -1,0 +1,33 @@
+[
+    {
+        "sectionId":1,
+        "sectionName":"General Questions",
+        "questionId":[1,108],
+        "sectionDescription": "Have a vision that changes the world of the digital project you want to pursue, but don’t know if that’s possible? Has your supervisor asked you for a rigorous balance of that one job and you need it tomorrow? You will get it all in just few minutes."
+    },
+    {
+        "sectionId":2,
+        "sectionName":"Strategy",
+        "questionId":[3,4,5,6,7,8,9,10,11,12,13,14],
+        "sectionDescription": "It all starts with reducing your strategy. A thoughtful strategy is a solid foundation for your digital project. It is an important part of your digital transformation, if not, the most important part. When defining your strategy, we try to find answers to questions such as: 'Who are the target audience, what message, what channels do we need, how will this fit the market, and how much will it cost?'"
+    },
+    {
+        "sectionId":3,
+        "sectionName":"UI/UX",
+        "questionId":[15,16],
+        "sectionDescription": "After all, you want your digital product to look good and make it as easy as possible to use it. With a thorough analysis of your needs and those of your users, our designers can create the product that looks the most sharp with the most intelligent user experience."
+    },
+    {
+        "sectionId":4,
+        "sectionName":"Development",
+        "questionId":[17,18,19,20],
+        "sectionDescription": "We are at the core of our work, the process of development. The following questions will suit your needs depending on the product type, desired features, implementation,… Thanks to our extensive technical stack and our excellent team of front and back experts we can develop any custom software or digital product. So don't hold back!"
+    },
+    {
+        "sectionId":5,
+        "sectionName":"Product Growth",
+        "questionId":[21,22],
+        "sectionDescription": "Once your product has been upgraded, it is ready for launch. Will you do this on your own or do you need support on your 'go to market' plan? Alternatively, we can take care of your product by fixing bugs or we can help you ensure the growth of your product by analyzing the needs of your users and making appropriate changes. Let's find out how we can work together."
+    }
+
+]

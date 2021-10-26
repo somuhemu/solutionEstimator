@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "section",
+  "info": {
+    "name": "section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "privateAttributes":["_id","id"],
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sectionId": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "sectionName": {
+      "type": "string",
+      "required": true
+    },
+    "questionIds": {
+      "type": "component",
+      "repeatable": true,
+      "component": "question.question",
+      "required": true
+    },
+    "sectionDescription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

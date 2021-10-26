@@ -1,0 +1,49 @@
+<!-- <div *ngIf="!showResults">
+    <section *ngIf="resultExist; else elseBlock">
+        <h1 class="heading">Estimate of your project</h1>
+  <mat-card class="priceEstimate">{{minPrice | currency}} - {{maxPrice | currency}}</mat-card>
+    <mat-expansion-panel class="sectionCard" *ngFor="let currentSectionAnswers of sectionWithAnswers">
+      <mat-expansion-panel-header class="sectionName">{{currentSectionAnswers.sectionName}}</mat-expansion-panel-header>
+      <mat-panel-description class="questionList" *ngIf="currentSectionAnswers.answers.length>0;else answersNotFound">
+        <mat-card *ngFor="let ans of currentSectionAnswers.answers" class="questionTemplate">
+          <div class="questionText">{{ans.question}}</div>
+          <mat-card-content *ngIf="ans.multiple;else singleAnswerBlock">
+            <mat-chip-list class="optionList">
+              <mat-chip *ngFor="let opt of ans.options" class="optionChip">{{opt.optionText}}</mat-chip>
+            </mat-chip-list>
+          </mat-card-content>
+          <ng-template #singleAnswerBlock>
+            <mat-card-content>
+              {{ans.options[0].optionText}}
+            </mat-card-content>
+          </ng-template>
+        </mat-card>
+      </mat-panel-description>
+      <ng-template #answersNotFound>
+        <mat-panel-description>
+          <mat-card class="errorMessage">
+            <mat-card-content>You haven't attempted questions from  section {{currentSectionAnswers.sectionName}}</mat-card-content>
+          </mat-card>
+        </mat-panel-description>
+      </ng-template>
+    </mat-expansion-panel>
+    </section>
+    <ng-template #elseBlock>
+      <mat-card>
+    <h1 class="heading">You Skipped all sections</h1>
+    </mat-card>
+    </ng-template>
+</div> -->
+
+<div class="form-group">
+<label for="email">Enter your email:</label>
+<input type="email"  [(ngModel)]="email_entered"><br>
+</div>
+<button (click)="postData()">submit</button>
+<div *ngIf="checkPrice">
+  The estimated cost range of the project:
+  {{lowerPrice}},{{upperPrice}}
+</div>
+
+
+

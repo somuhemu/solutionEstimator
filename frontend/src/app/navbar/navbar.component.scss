@@ -1,0 +1,29 @@
+@import '../../styles.scss';
+
+.welcome-text,.center-text{
+font-family: Georgia, serif;
+font-size: 2vw;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: $green;
+font-weight: normal;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: small-caps;
+text-transform: none;
+}
+.welcome-text{
+    font-size: 2vw;
+    color: #0f105c;
+}
+
+@media all and (max-width: 320px),(max-width: 414px),(max-width: 540px){
+    .welcome-text{
+        font-size: medium;
+    }
+    .center-text{
+        display: none;
+    }
+}
+  
+

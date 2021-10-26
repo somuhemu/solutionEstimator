@@ -1,0 +1,41 @@
+@import '../../styles.scss';
+
+.heading{
+    font-size:45px;
+    text-align: center;
+    margin: 30px;
+    color: $light-grey;
+}
+.questionTemplate {
+  margin: 2% 2% 2% 2%;
+}
+
+.optionChip {
+  background-color: #15A811;
+  color:$white;
+  height: max-content;
+}
+.nextSectionButton {
+  background-color: #15A811;
+  color:$white;
+  margin:1%;
+  float: right;
+}
+section {
+  width: 90%;
+  margin: auto;
+}
+
+.questionText {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+@media screen and (max-width:578px){
+  .questionText {
+    font-size: small;
+  }
+  .heading {
+    font-size: x-large;
+  }
+}

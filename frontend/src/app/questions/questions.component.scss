@@ -1,0 +1,227 @@
+@import "../../styles.scss";
+
+.customContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin:auto;
+}
+.skipCard{
+  width: 50%;
+  text-align: justify;
+}
+.skipButton{
+  background-color: $yellow;
+  outline: 0px;
+  color: $white;
+  text-transform: uppercase;
+}
+.skipButton:hover{
+  background-color: $yellow ;
+  opacity: 0.8;
+}
+
+.buttonSelected{
+  background-color: $green;
+  color: $white;
+}
+
+.continueButton{
+  background-color: $green;
+  color: $white;
+}
+
+
+.skipSection{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+.skipContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+  
+}
+
+label {
+  cursor: pointer;
+}
+
+.navButtonNext{
+  background-color: $white;
+  color: $green;
+  outline: none;
+  float:right;
+  width:70px;
+  height:70px;
+}
+
+.navButtonPrevious{
+  background-color: $white;
+  color: $yellow;
+  outline: none;
+  float:left;
+  width:70px;
+  height:70px;
+}
+
+.navButtonsContainer {
+  width:100%;
+  box-shadow:none;
+  margin-bottom:20px;
+}
+
+.QuestionText {
+  color: $light-grey;
+  font-weight: bold;
+  width: 80%;
+  margin:auto;
+  padding: 15px;
+  border-radius:30px;
+  height: auto;
+  background-color: transparent;
+  text-align: center;
+  margin: 50px;
+  box-shadow:none;
+  font-size:20px;
+  
+}
+.singleOptionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
+  width: 80%;
+  flex-direction: column;
+}
+.cards {
+  background-color: white;
+  width: 200px;
+  border-radius: 12px;
+  padding: 10px 28px 10px 28px;
+  margin: 5px;
+  text-align: center;
+  border: 2px solid $light-grey;
+  background-color: rgb(205, 245, 231);
+}
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: $light-grey;
+}
+::ng-deep .mat-progress-bar-buffer {
+  background: transparent;
+}
+.mat-progress-bar{
+  margin-top: 5px;
+}
+
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  font-size:large;
+  color: $light-grey;
+}
+::ng-deep .mat-ink-bar {
+  background-color: $green !important;
+  height: 3px !important;
+  }
+
+
+.sectionName {
+  text-align: center;
+  font-size: 2vw;
+  padding: 1vh;
+}
+
+.sectionNameText {
+  color: $green;
+  font-size:xx-large;
+}
+
+.sectionDescriptionText{
+  font-size:large;
+  color: $light-grey;
+}
+
+
+::ng-deep .material-icons {
+  font-size:40px;
+}
+::ng-deep .mat-icon {
+  width:max-content !important;
+  height:max-content !important;
+}
+.singleOptionList mat-chip{
+  width:80%;
+  height:max-content;
+  padding:15px;
+  margin:10px auto;
+  background-color:#D3D3D3;
+  box-shadow:2px 2px 2px 2px #D3D3D3;
+  display:inline-block;
+}
+
+.singleOptionList {
+  width:100%;
+}
+
+.multipleOptionContainer {
+  width:90%;
+  margin:auto;
+  align-items:center;
+}
+
+.multipleOptions {
+  width:90%;
+  padding:40px;
+  margin:auto;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+.multipleOptions mat-chip {
+  height:max-content;
+  margin-right:5px;
+}
+
+@media all and (max-width: 320px), (max-width: 414px), (max-width: 540px) {
+  .sectionName {
+    font-size: 20px;
+  }
+}
+
+::ng-deep .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+  background-color:$green;
+  color:white;
+}
+
+@media screen and (min-width:168px) and (max-width:768px) {
+
+  ::ng-deep .material-icons {
+    font-size:30px;
+  }
+
+  ::ng-deep .mat-fab .mat-button-wrapper{
+    padding:0px !important;
+  }
+
+  .navButtonNext {
+    width:55px;
+    height:55px;
+  }
+  .navButtonPrevious {
+    width:55px;
+    height:55px;
+  }
+  .singleOptionContainer {
+    width:90%;
+  }
+  .singleOptionList mat-chip {
+    width:100%;
+  }
+}

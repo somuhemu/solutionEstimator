@@ -1,0 +1,75 @@
+<mat-tab-group class="section-names" mat-align-tabs="center" animationDuration="0ms" #tabRef 
+  (selectedTabChange)="skipSecionHandler(tabRef.selectedIndex)" [selectedIndex]="sectionNumber">
+  <mat-tab *ngFor="let allSections of sections" label="{{allSections.sectionName}}"></mat-tab>
+    
+</mat-tab-group>
+
+<div *ngIf="!sectionStarted" >
+  
+  <div class="skipContainer">
+
+    <mat-card class="skipCard">
+      <mat-card-title class="sectionNameText">
+        {{ sections[sectionNumber].sectionName }}
+      </mat-card-title>
+      <br>
+      <mat-card-content class="sectionDescriptionText">
+        {{sections[sectionNumber].sectionDescription}}
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-stroked-button  class="skipButton" (click)="skipSection()">
+          Skip {{sections[sectionNumber].sectionName}}</button>
+        <button mat-raised-button  class="continueButton" (click)="continue()">CONTINUE</button>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>
+
+</div>
+
+
+<div *ngIf="sectionStarted">
+
+  <mat-progress-bar
+    mode="determinate"
+    value="{{
+      (currentQuestion / sections[sectionNumber].questionId.length) * 100
+    }}"
+  ></mat-progress-bar>
+
+  <div class="customContainer">
+    <mat-card class="QuestionText">
+      {{ currentQuestion }} . {{ presentQuestion.question }}
+    </mat-card>
+
+    <div *ngIf="presentQuestion.multiple; else elseBlock" class="multipleOptionContainer">
+
+      <mat-chip-list selectable multiple  class="multipleOptions">
+        <mat-chip  *ngFor="let option of presentQuestion.options" value="{{ option }}"
+        (click)="multipleToggleSelection(option)" [selected]="option.selected">
+          {{option.optionText}}
+        </mat-chip>
+      </mat-chip-list>
+    </div>
+
+    <ng-template #elseBlock>
+
+      <div class="singleOptionContainer">
+
+        <mat-chip-list class="singleOptionList mat-chip-list-stacked">
+          <mat-chip  #c="matChip" *ngFor="let option of presentQuestion.options" value="{{ option }}"
+          (click)="toggleSelection(c,option)" [selected]="option.selected">
+
+            {{option.optionText}}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </ng-template>
+    <mat-card class="navButtonsContainer">
+      <button *ngIf="currentQuestion>1" mat-fab class="navButtonPrevious" (click)="previous()"><mat-icon class="nav-icons">navigate_before</mat-icon></button>
+      <button mat-fab class="navButtonNext" (click)="next()"><mat-icon class="nav-icons">navigate_next</mat-icon></button>
+    </mat-card>
+
+  </div>
+</div>
